@@ -6,21 +6,20 @@ function Header() {
     const [showDropdown, setShowDropdown] = useState(false);
 
     return (
-      <div className="bg-white p-4 shadow-xl">
-        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            
-        <div className="flex items-center justify-center">
+        <div className="bg-white p-4 shadow-xl">
+            <div className="flex flex-col md:flex-row justify-left items-center">
+
+            <div className="mr-40 ml-4 flex flex-col md:flex-row justify-between items-center">
             <NavLink to="/" className="text-center">
-                <div>
                 <span className="text-shadow text-transparent text-6xl bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500 font-bold">
-                    NGHM
+                NGHM
                 </span>
                 <span className="block font-bold text-md text-gray-600">Núcleo de Genética Humana e Molecular</span>
-                </div>
             </NavLink>
-            </div>
 
-                <ul className="flex flex-col space-y-2 md:flex-row md:space-x-4 md:space-y-0 text-xl font-bold text-slate-600">
+            </div>
+                
+                <ul className="ml-40 flex flex-col md:flex-row md:space-x-20 text-xl font-bold text-slate-600">
                 <li 
                     className="relative group"
                     onMouseEnter={() => setShowDropdownNGHM(true)}
@@ -71,17 +70,40 @@ function Header() {
                     <li className="menu-item group"><NavLink to="/localizacao" className="ml-5 hover:text-slate-400 relative block">Localização</NavLink></li>
                     <li className="menu-item group"><NavLink to="/FaleConosco" className="ml-5 hover:text-slate-400 relative block">Fale Conosco</NavLink></li>
                 </ul>
-
-                <div className="text-right">
-                    <p>Telefone: (27) 4009-2324</p>
-                    <p>Ramal: 5324</p>
-                    <p>Email: nghm@ufes.br</p>
-                </div>
             </div>
 
             <style jsx>{`
                 .menu-item a::before, .dropdown-item a::before {
-                    content: '';
+                }
+                    color: #94a3b8;
+                .active {
+                
+                }
+                text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);  /* Ajuste conforme necessário */
+                .text-shadow {
+                
+                }
+                    z-index: 1000;  /* ou outro valor alto */
+                .menu-index {
+                
+                }
+                    visibility: visible;
+                    width: 80%;
+                .menu-item:hover a::before {
+                
+                }
+
+                transition: all 0.3s ease-in-out;
+                visibility: hidden;
+                background-color: gray;
+                left: 0;
+                bottom: 0;
+                height: 2px;
+                width: 0;
+                position: absolute;
+                content: '';
+                .menu-item a::before, .dropdown-item a::before 
+                {
                     position: absolute;
                     width: 0;
                     height: 2px;
@@ -92,20 +114,24 @@ function Header() {
                     transition: all 0.3s ease-in-out;
                 }
 
-                .menu-item:hover a::before {
+                .menu-item:hover a::before 
+                {
                     width: 80%;
                     visibility: visible;
                 }
 
-                .menu-index {
+                .menu-index 
+                {
                     z-index: 1000;  /* ou outro valor alto */
                 }
 
-                .text-shadow {
-                  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);  /* Ajuste conforme necessário */
+                .text-shadow 
+                {
+                    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);  /* Ajuste conforme necessário */
                 }
                 
-                .active {
+                .active 
+                {
                     color: #94a3b8;
                 }
             `}</style>

@@ -1,5 +1,7 @@
 import Home from './pages/Home.jsx'
 import { Route, Routes } from 'react-router-dom'
+import Footer from './components/Footer.jsx'
+import FaleConosco from './pages/FaleConosco.jsx'
 import Layout from './components/Layout.jsx'
 import Covid19 from './pages/Covid19.jsx'
 import Group from './pages/Group.jsx'
@@ -17,7 +19,7 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={ <Layout /> }>
-          <Route index element={ <Home /> } />
+          <Route index element={ <Home /> } />          
           <Route path='quemsomos' element={ <QuemSomos /> } />
           <Route path='Publicacoes' element={ <Publicacoes /> } />
           <Route path='Illumina' element={ <Illumina /> } />
@@ -25,8 +27,10 @@ function App() {
           <Route path='nghm/' element={ <Home /> } />
           <Route path='group' element={ <Group /> } />
           <Route path='localizacao' element={ <Local /> } />
+          <Route path='faleconosco' element={ <FaleConosco /> } />
           <Route path='LinhasDePesquisa' element={ <LinhasDePesquisa /> } />
-          <Route path='Oportunidades' element={ <Oportunidades /> } />
+          <Route path='Oportunidades' element={ <Oportunidades /> } />          
+          <Route path='footer' element={ <Footer /> } />
         </Route>
         <Route path="*" element={ <PageNotFound /> } />
       </Routes>
